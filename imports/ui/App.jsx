@@ -1,11 +1,17 @@
 import React from 'react';
-import { Hello } from './Hello.jsx';
-import { Info } from './Info.jsx';
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import PageHome from "./pages/PageHome"
+import PageLogin from "./pages/PageLogin"
 
 export const App = () => (
-  <div>
-    <h1>Welcome to Meteor!</h1>
-    <Hello/>
-    <Info/>
-  </div>
+  <Router>
+    <Switch>
+      <Route path="/" exact>
+        <PageHome user={false}/>
+      </Route>
+      <Route path="/login" exact>
+        <PageLogin />
+      </Route>
+    </Switch>
+  </Router>
 );
