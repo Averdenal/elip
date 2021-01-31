@@ -2,14 +2,14 @@ import React, {useState} from "react"
 import {StyledPageLogin} from "../elements/styledPageLogin"
 import { FormLogin, FormRegister} from "../components/forms/FormLogin"
 
-const PageLogin = () => {
+const PageLogin = (props) => {
     const [showLogin, setshowLogin] = useState(<FormLogin />)
 
     const handleActive = (e) =>{
         if(e.target.id == "login"){
-            setshowLogin(<FormLogin />)
+            setshowLogin(<FormLogin history={props.history} />)
         }else{
-            setshowLogin(<FormRegister />)
+            setshowLogin(<FormRegister history={props.history} />)
         }
     }
     return(
