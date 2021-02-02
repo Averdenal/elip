@@ -1,7 +1,7 @@
 import React from "react"
 import {Redirect} from 'react-router-dom';
 import { Meteor } from 'meteor/meteor'
-import { useTracker } from 'meteor/react-meteor-data';
+import {BigTopNav} from '../components/nav/topnav'
 
 const PageHome = () => {
     const user = Meteor.userId()
@@ -13,8 +13,9 @@ const PageHome = () => {
 
     return(
         <div>
-            <h1>PageHome</h1>
-        </div>)
+            <BigTopNav />
+        </div>
+    )
 }
 
 export default PageHome
