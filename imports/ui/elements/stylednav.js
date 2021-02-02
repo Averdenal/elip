@@ -23,18 +23,38 @@ export const StyledBigTopNavActions = Styled.div`
         li{
             position: relative;
             list-style-type: none;
+            display:flex;
+            justify-content: center;
+            align-items: center;
             a{
                 padding: 0 24px;
                 display: block;
                 color: #fff;
                 font-size: .75rem;
                 font-weight: 700;
-                line-height: 80px;
                 cursor: pointer;
                 transition: color .2s ease-in-out;
+                svg{
+                    opacity: 0.4;
+                    :hover{
+                        opacity: 1;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
             }
         }
     }
+    .svg-actions{
+        padding: 0 15px;
+            svg{
+                margin: 0 15px;
+                opacity: 0.4;
+                    :hover{
+                        opacity: 1;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+        }
     input{
         padding-right: 60px;
         padding-left:18px;
@@ -55,7 +75,11 @@ export const StyledBigTopNavActions = Styled.div`
     }
 `
 export const StyledBigTopNavActionsLogo = Styled.div`
+        display: flex;
+        flex-direction: row;
+        padding-left:10px;
     h1{
+        
         margin-left: 26px;
         color: #fff;
         font-family: Titillium Web,sans-serif;
