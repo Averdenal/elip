@@ -11,7 +11,10 @@ export const StyledBigTopNav = Styled.div`
     top: 0;
     left: 0;
     z-index: 10000;
-`
+    @media screen and (max-width: 640px) {
+        display: none;
+    }
+    `
 
 export const StyledBigTopNavActions = Styled.div`
     display: flex;
@@ -56,11 +59,11 @@ export const StyledBigTopNavActions = Styled.div`
                 }
         }
     input{
-        padding-right: 60px;
+
         padding-left:18px;
         border-radius: 10px 0 0 10px;
         outline: none;
-        width: 100%;
+        width: 500px;
         height: 52px;
         position: relative;
         border: none;
@@ -68,16 +71,22 @@ export const StyledBigTopNavActions = Styled.div`
         color: #fff;
     }
     .input-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 52px;
+        width: 52px;
         border-radius:0 10px 10px 0;
         background-color: #4e4ac8;
-        width:25px;
+        svg{
+            opacity: 0.4
+        }
     }
 `
 export const StyledBigTopNavActionsLogo = Styled.div`
         display: flex;
         flex-direction: row;
-        padding-left:10px;
+        padding-left:30px;
     h1{
         
         margin-left: 26px;
