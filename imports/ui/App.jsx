@@ -13,7 +13,7 @@ export const App = () => {
     <Router>
       <Switch>
         <Route path="/" exact>
-          <PageHome user={user}/>
+          <PageHome />
         </Route>
         <Route path="/login" exact>
           <PageLogin />

@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components'
 import {SubMenuMobileUser} from './SubMenuMobileUser'
 import {SubMenuMobileIteam} from './SubMenuMobileIteam'
 import {SectionMiniBadge} from '../sectionMiniBadges'
-import { Facebook,Grid,ShoppingBag,Friend,Messages,Notification,Settings} from "../svg"
+import { Overview,Group,Members,Badges,Quests,Streams,Events,Forums,Marketplace } from "../svg"
 
 export const SubMenuMobile = (props) => {
     return(<>
@@ -15,9 +15,34 @@ export const SubMenuMobile = (props) => {
                     <br/>
                     <SectionMiniBadge />
                     <div>
-                    <SubMenuMobileIteam text={"Newsfeed"} active={true}>
-                        <Facebook width="25" height="25" fill="#adafca"/>
+                    <SubMenuMobileIteam text={"Overview"} active={true}>
+                        <Overview width="25" height="25" fill="#adafca"/>
                     </SubMenuMobileIteam>
+                    <SubMenuMobileIteam text={"Group"} active={false}>
+                        <Group width="25" height="25" fill="#adafca"/>
+                    </SubMenuMobileIteam>
+                    <SubMenuMobileIteam text={"Members"} active={false}>
+                        <Members width="25" height="25" fill="#adafca"/>
+                    </SubMenuMobileIteam>
+                    <SubMenuMobileIteam text={"Badges"} active={false}>
+                        <Badges width="25" height="25" fill="#adafca"/>
+                    </SubMenuMobileIteam>
+                    <SubMenuMobileIteam text={"Quests"} active={false}>
+                        <Quests width="25" height="25" fill="#adafca"/>
+                    </SubMenuMobileIteam>
+                    <SubMenuMobileIteam text={"Streams"} active={false}>
+                        <Streams width="25" height="25" fill="#adafca"/>
+                    </SubMenuMobileIteam>
+                    <SubMenuMobileIteam text={"Events"} active={false}>
+                        <Events width="25" height="25" fill="#adafca"/>
+                    </SubMenuMobileIteam>
+                    <SubMenuMobileIteam text={"Forums"} active={false}>
+                        <Forums width="25" height="25" fill="#adafca"/>
+                    </SubMenuMobileIteam>
+                    <SubMenuMobileIteam text={"Marketplace"} active={false}>
+                        <Marketplace width="25" height="25" fill="#adafca"/>
+                    </SubMenuMobileIteam>
+                  
                     </div>
                     
                 </StyledSubMenuMobileContainer>

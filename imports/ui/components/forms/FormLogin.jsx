@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import {StyledFormLogin} from '../../elements/styledFormLogin'
+import styled from 'styled-components'
 import {Meteor} from 'meteor/meteor'
 import { Accounts } from 'meteor/accounts-base'
 import { useHistory } from "react-router-dom";
@@ -36,13 +36,13 @@ export const FormLogin = (props) => {
         })
     }
     return(
-        <StyledFormLogin>
+        <Form>
             <form onSubmit={handleSubmit}>
                 <input name="email" type="text" placeholder="email" value={state.email} onChange={handleChange}/>
                 <input name="password" type="password" placeholder="password" value={state.password} onChange={handleChange}/>
                 <input type="submit" value="Connexion" />
             </form>
-        </StyledFormLogin>
+        </Form>
         )
 }
 
@@ -91,7 +91,7 @@ export const FormRegister = () => {
     }
 
     return(
-        <StyledFormLogin>
+        <Form>
             <form onSubmit={handleSubmit}>
                 <input name="email" type="email" placeholder="E-Mail" value={state.email} onChange={handleChange}/>
                 <input name="username" type="text" placeholder="Login" value={state.username} onChange={handleChange}/>
@@ -99,6 +99,30 @@ export const FormRegister = () => {
                 <input name="confirmePassword" type="password" placeholder="confirmePassword" value={confirmePassword} onChange={handleChange}/>
                 <input type="submit" value="Enregistrement" />
             </form>
-        </StyledFormLogin>
+        </Form>
         )
 }
+
+const Form = styled.div`
+    background-color:white;
+    border-radius:20px;
+    form{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        width:300px;
+        margin:20px;
+        input{
+            padding:10px;
+            margin-top:10px;
+            width:90%;
+            border-radius:10px;
+            border: 1px solid #dedeea;
+            outline:none;
+            :focus{
+                border-color: #615dfa;
+            }
+        }   
+    }
+`
