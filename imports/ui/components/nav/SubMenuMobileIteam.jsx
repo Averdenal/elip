@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components'
 
 export const SubMenuMobileIteam = (props) => {
     return(<>
-            <Container active={props.active}>
+            <Container active={props.active} href={props.href}>
                 {props.children}
                 <p>{props.text}</p>
             </Container>
@@ -14,6 +14,8 @@ export const SubMenuMobileIteam = (props) => {
 
 //STYLE
 const Container = styled.a`
+    text-decoration: none;
+    color:black;
     padding: 15px ;
     margin: 10px;
     display:flex;

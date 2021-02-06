@@ -1,17 +1,23 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import styled from 'styled-components'
+import {Meteor} from "meteor/meteor"
 
-export const SubMenuMobileUser = (props) => {
+export const SubMenuMobileUser = (props) =>{
+
+    const username = Meteor.user().username
+
     return(
         <UserZone>
             <UserZoneImg>
                 <img src={"./img/avatar/08.jpg"} alt={"Avatar"} />
             </UserZoneImg>
-            <UserZoneInfo>Amaury Verdenal</UserZoneInfo>
+            <UserZoneInfo>{username}</UserZoneInfo>
             <UserZoneLevel>Level 11</UserZoneLevel>
         </UserZone>
     )
+    
 }
+
 
 //STYLE
 const UserZone = styled.div`

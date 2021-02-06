@@ -5,7 +5,7 @@ import {MobileNavTop} from "../components/nav/mobileNavTop"
 import {BannerPage} from '../components/page/banner'
 import {ContainerPage} from '../components/elements/container'
 
-const PageHome = (props) => {
+const PageGroup = () => {
     const user = Meteor.userId()
 
     if(!user){
@@ -14,17 +14,17 @@ const PageHome = (props) => {
 
     return(
         <>
-            <MobileNavTop/>
+            <MobileNavTop />
             <ContainerPage>
                 <BannerPage 
-                img={"./img/banner/newsfeed-icon.png"} 
-                alt={"newsfeed-icon"} 
-                title={"Newsfeed"} 
-                text={"Check what your friends have been up to!"}
+                img={"./img/banner/groups-icon.png"} 
+                alt={"ngroups-icon"} 
+                title={"Groups"} 
+                text={"Browse all the groups of the community!"}
                 />
             </ContainerPage>
         </>
     )
 }
 
-export default PageHome
+export default PageGroup
