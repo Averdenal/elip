@@ -1,10 +1,17 @@
 import React,{useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {Meteor} from "meteor/meteor"
+import {Login} from "../svg"
 
 export const SubMenuMobileUser = (props) =>{
 
     const username = Meteor.user().username
+
+    const logout = ()=> {
+        Meteor.logout((err)=>{
+            console.log(err)
+        })
+    }
 
     return(
         <UserZone>
@@ -13,12 +20,13 @@ export const SubMenuMobileUser = (props) =>{
             </UserZoneImg>
             <UserZoneInfo>{username}</UserZoneInfo>
             <UserZoneLevel>Level 11</UserZoneLevel>
+            <UserZoneParam onClick={logout}>
+                <Login width="30" height="30" fill="red"/>
+            </UserZoneParam>
         </UserZone>
     )
     
 }
-
-
 //STYLE
 const UserZone = styled.div`
     display:grid;
@@ -56,4 +64,18 @@ const UserZoneLevel = styled.div`
     font-size: .75rem;
     font-weight: 500;
     font-family: Rajdhani,sans-serif;
+`
+const UserZoneParam = styled.button`
+    background:transparent;
+    border:none;
+    outline:none;
+    grid-column: 5;
+    grid-row: 1/3;
+    display:flex;
+    align-items:center;
+    :hover{
+        svg{
+            fill: #00c7d9;
+        }
+    }
 `

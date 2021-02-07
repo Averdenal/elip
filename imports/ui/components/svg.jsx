@@ -149,3 +149,10 @@ export const Quests = props => (
       <rect x="11" y="9" width="2" height="2"/>
     </svg>
 )
+export const Login = props => (
+  <svg id="svg-login" viewBox="0 0 20 20" preserveAspectRatio="xMinYMin meet" {...props}>
+      <path d="M13,2.523v2.176c2.358,1.126,4,3.513,4,6.301c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-2.788,1.642-5.175,4-6.301V2.523C3.507,3.76,1,7.083,1,11c0,4.971,4.029,9,9,9s9-4.029,9-9
+      C19,7.083,16.493,3.76,13,2.523z M11,0H9v10h2V0z"/>
+    </svg>
+)
+
