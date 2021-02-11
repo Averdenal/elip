@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 import { Accounts } from 'meteor/accounts-base'
 
+
 if(Meteor.isServer){
     Meteor.publish("allUsers", function(){
         return Meteor.users.find({},{
@@ -11,5 +12,10 @@ if(Meteor.isServer){
         acceptRegister:(email) => {
             return Accounts.findUserByEmail(email)
         },
+    })
+}
+if(Meteor.isClient){
+    Meteor.methods({
+        
     })
 }

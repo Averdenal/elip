@@ -19,23 +19,45 @@ export const SettingsInfoUser = ()=> {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(user)
+        Meteor.users.update(
+            {_id: userdata._id}, 
+            {$set:
+                {
+                    profile:user
+                }
+            },function(err, result){
+                console.log(err, result)
+            })
+
     }
     const MakeItem = (X)=> {
         return <option key={X}>{X}</option>;
     }
     return(
-        <SettingForm onSubmit={handleSubmit}>
-            <h3>Profile utilisateur : {userdata.username}</h3>
-            <input type="text" name="profilename" placeholder="Full Name" onChange={handleChange} value={user.fullname}/>
-            <input type="text" name="tagline" placeholder="TagLine" onChange={handleChange} value={user.tagline}/>
-            <input type="date" name={"naissance"} defaultValue="1990-01-01" placeholder="Date de naissance" onChange={handleChange} value={user.naissance}/>
-            <textarea type="text" name="bio" defaultValue={user.bio || "Bio"} onChange={handleChange} value={user.bio}></textarea>
-            <select>{Data.map(MakeItem)}</select>
-            <input type="submit" value="Enregistrer" />
-        </SettingForm>
+    <>
+        <Settingdiv>
+
+        </Settingdiv>
+        <Settingdiv>
+            <SettingForm onSubmit={handleSubmit}>
+                <h3>Profile utilisateur : {userdata.username}</h3>
+                <input type="text" name="profilename" placeholder="Full Name" onChange={handleChange} value={user.profilename}/>
+                <input type="text" name="tagline" placeholder="TagLine" onChange={handleChange} value={user.tagline}/>
+                <input type="date" name={"naissance"} defaultValue="1990-01-01" placeholder="Date de naissance" onChange={handleChange} value={user.naissance}/>
+                <textarea type="text" name="bio" defaultValue={user.bio || "Bio"} onChange={handleChange} value={user.bio}></textarea>
+                <select>{Data.map(MakeItem)}</select>
+                <input type="submit" value="Enregistrer" />
+            </SettingForm>
+        </Settingdiv>
+        
+    </>
     )
 }
-
+const Settingdiv = styled.form`
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+    `
 const SettingForm = styled.form`
     border-radius:10px;
     box-shadow: 5px 5px 10px #00000040;
