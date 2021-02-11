@@ -13,13 +13,15 @@ export const BannerPage = (props) => {
 
 const Banner = styled.div`
 
-    margin-top:70px;
+    //margin-top:70px;
     position: relative;
     height: 86px;
     min-height: auto;
     padding: 18px 28px 0 108px;
     border-radius: 12px;
     background: url(./img/banner/banner-bg.png) no-repeat 50%;
+    width:80%;
+    max-width:1050px;
     img{
         position: absolute;
         bottom: 0;

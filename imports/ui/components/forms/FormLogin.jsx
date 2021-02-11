@@ -80,11 +80,22 @@ export const FormRegister = () => {
                         email:state.email,
                         password:state.password,
                         profile:{
-                          role:"ROLE_NOT",
+                            naissance:"",
+                            profilename:"",
+                            role:"",
+                            lvl:0,
+                            Badges:[],
+                            img:"./img/avatar/08.jpg",
+                            banner:"",
+                            bio:"Salut les gens",
+                            tagline:"",
                         }
-                      }, function (err){
-                          console.log(err)
-                      })
+                    }, function (err){
+                        if(err === undefined){
+                        window.location.reload();
+                        }
+                        console.log(err)
+                    })
                 }
             })
         }

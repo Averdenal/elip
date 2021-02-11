@@ -3,26 +3,17 @@ import styled from 'styled-components'
 import {Meteor} from "meteor/meteor"
 import {Login} from "../svg"
 
-export const SubMenuMobileUser = (props) =>{
+export const SubMenuMobileUser = () =>{
 
-    const username = Meteor.user().username
-
-    const logout = ()=> {
-        Meteor.logout((err)=>{
-            console.log(err)
-        })
-    }
+    const user = Meteor.user()
 
     return(
         <UserZone>
             <UserZoneImg>
-                <img src={"./img/avatar/08.jpg"} alt={"Avatar"} />
+                <img src={user.profile.img} alt={"Avatar"} />
             </UserZoneImg>
-            <UserZoneInfo>{username}</UserZoneInfo>
-            <UserZoneLevel>Level 11</UserZoneLevel>
-            <UserZoneParam onClick={logout}>
-                <Login width="30" height="30" fill="red"/>
-            </UserZoneParam>
+            <UserZoneInfo>{user.username}</UserZoneInfo>
+            <UserZoneLevel>Level<span>{user.profile.lvl}</span></UserZoneLevel>
         </UserZone>
     )
     
@@ -59,20 +50,45 @@ const UserZoneLevel = styled.div`
     grid-column: 2/4;
     grid-row: 2;
     display:flex;
-
     color: #8f91ac;
     font-size: .75rem;
     font-weight: 500;
     font-family: Rajdhani,sans-serif;
+    span {
+        font-weight:900;
+        margin-left:10px;
+    }
 `
 const UserZoneParam = styled.button`
-    background:transparent;
+    background:#dc3545;
     border:none;
     outline:none;
     grid-column: 5;
-    grid-row: 1/3;
+    grid-row: 1;
     display:flex;
     align-items:center;
+    width:30px;
+    height:30px;
+    border-radius:5px;
+    justify-content:center;
+    :hover{
+        svg{
+            fill: #00c7d9;
+        }
+    }
+`
+const UserZoneParamSetting = styled.button`
+    background:#dc3545;
+    border:none;
+    outline:none;
+    grid-column: 5;
+    grid-row: 2;
+    display:flex;
+    align-items:center;
+    width:30px;
+    height:30px;
+    border-radius:5px;
+    justify-content:center;
     :hover{
         svg{
             fill: #00c7d9;

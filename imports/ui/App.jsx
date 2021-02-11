@@ -11,7 +11,7 @@ import PageMarketplace from "./pages/PageMarketplace"
 import PageMembers from "./pages/PageMembers"
 import PageQuests from "./pages/PageQuests"
 import PageStreams from "./pages/PageStreams"
-import { useTracker } from 'meteor/react-meteor-data';
+import PageSettings from "./pages/PageSettings"
 import '../api/users'
 
 
@@ -19,7 +19,7 @@ import '../api/users'
 export const App = () => {
   const user = Meteor.user()
   return(
-    <Router>
+    <Router forceRefresh={true}>
       <Switch>
         <Route path="/" exact>
           <PageHome user={user}/>
@@ -50,6 +50,9 @@ export const App = () => {
         </Route>
         <Route path="/login" exact>
           <PageLogin />
+        </Route>
+        <Route path="/settings" exact>
+          <PageSettings />
         </Route>
       </Switch>
     </Router>

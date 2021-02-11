@@ -37,9 +37,6 @@ export const MobileNavTop = () => {
                 <a>
                     <Notification width="20" height="20" fill="white"/>
                 </a>
-                <a>
-                    <Settings width="20" height="20" fill="white"/>
-                </a>
             </StyledMobileNavTopButtomActions>
         </StyledMobileNavTopButtom>
         </>)

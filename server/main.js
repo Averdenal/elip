@@ -9,7 +9,12 @@ Meteor.startup(() => {
       email:"admin@fr.fr",
       password:"admin",
       profile:{
-        role:"admin",
+        role:"ROLE_ADMIN",
+        lvl:0,
+        Badges:[],
+        img:"./img/avatar/08.jpg",
+        banner:"",
+        bio:"salut les gens",
       }
     })
   }
