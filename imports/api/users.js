@@ -14,8 +14,3 @@ if(Meteor.isServer){
         },
     })
 }
-if(Meteor.isClient){
-    Meteor.methods({
-        
-    })
-}

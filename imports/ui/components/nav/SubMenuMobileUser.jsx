@@ -1,18 +1,26 @@
 import React,{useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {Meteor} from "meteor/meteor"
-import {Login} from "../svg"
 
 export const SubMenuMobileUser = () =>{
 
     const user = Meteor.user()
+    
+    const username = () => {
+        if(user.profile.profilename != ""){
+            d = (user.profile.profilename +" ("+ user.username +")")
+        }else{
+            d = user.username
+        }
+        return d
+    }
 
     return(
         <UserZone>
             <UserZoneImg>
                 <img src={user.profile.img} alt={"Avatar"} />
             </UserZoneImg>
-            <UserZoneInfo>{user.username}</UserZoneInfo>
+            <UserZoneInfo>{username()}</UserZoneInfo>
             <UserZoneLevel>Level<span>{user.profile.lvl}</span></UserZoneLevel>
         </UserZone>
     )

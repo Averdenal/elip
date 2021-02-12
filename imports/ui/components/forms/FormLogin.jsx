@@ -89,6 +89,8 @@ export const FormRegister = () => {
                             banner:"",
                             bio:"Salut les gens",
                             tagline:"",
+                            Relationships:"",
+                            pays:""
                         }
                     }, function (err){
                         if(err === undefined){

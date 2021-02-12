@@ -75,7 +75,7 @@ export const SubMenuMobile = (props) => {
 //STYLE
 const StyledSubMenuMobileBack = styled.div`
     transition:0.3s ease-in-out ;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color:#00000000;
@@ -90,7 +90,7 @@ const StyledSubMenuMobileBack = styled.div`
 `
 const StyledSubMenuMobileActions = styled.div`
     transition:0.2s ease-in-out ;
-    position: absolute;
+    position: fixed;
     top: 50px;
     overflow:hidden;
     height:100px;
@@ -126,7 +126,7 @@ const StyledSubMenuMobileActions = styled.div`
 
 const StyledSubMenuMobile = styled.div`
     transition:0.3s ease-in-out ;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -320px;
     background-color:white;
