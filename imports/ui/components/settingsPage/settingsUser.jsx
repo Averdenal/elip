@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import {Meteor} from 'meteor/meteor'
+import {FormChangePassword} from '../forms/changePassword'
 
 export const SettingsInfoUser = ()=> {
     const userdata = Meteor.user()
@@ -65,6 +66,10 @@ export const SettingsInfoUser = ()=> {
 
                 <input type="submit" value="Enregistrer" />
             </SettingForm>
+        </Settingdiv>
+        <Settingdiv>
+            <h3>Change Password</h3>
+            <FormChangePassword />
         </Settingdiv>
         <Settingdiv>
             <h3>interests</h3>

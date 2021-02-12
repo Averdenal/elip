@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import { Facebook,Grid,ShoppingBag,Friend,Messages,Notification,Settings} from "../svg"
+import {Facebook,Grid,ShoppingBag,Friend,Messages,Notification} from "../svg"
 import { SubMenuMobile } from "./SubMenuMobile"
 
 export const MobileNavTop = () => {
