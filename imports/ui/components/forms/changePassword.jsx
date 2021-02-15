@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import styled, {css} from 'styled-components'
+import MessageFlash from '../elements/flashMessage'
+
 
 
 
@@ -60,7 +62,6 @@ export const FormChangePassword = () => {
 
     return (
         <SettingForm onSubmit={handleSubmit}>
-            <FlashMess active={flash.active} err={flash.err}>{flash.mess}</FlashMess>
             <input type="password" id="oldPassword" name="oldpassword" placeholder="Old Password" onChange={handleChange} value={pwd.oldPassword} />
             <input type="password" id="NewPassword" name="newpassword" placeholder="New Password" onChange={handleChange} value={pwd.newPassword} />
             <input type="password" id="ConfirmePassword" name="confirmepassword" className={btnchangement.class} placeholder="Confirme Password" onChange={handleChange} value={pwd.confirmepassword} />
@@ -68,21 +69,7 @@ export const FormChangePassword = () => {
         </SettingForm>
     )
 }
-const FlashMess = styled.div`
-    display:none;
-    padding:10px;
-    background-color:green;
-    color:white;
-    font-weight:900;
-    text-align:right;
-    ${props => props.active && css`
-        display:block;
-  `}
-  ${props => props.err && css`
-        display:block;
-        background-color:red;
-  `}
-`
+
 
 const SettingForm = styled.form`
     display:flex;

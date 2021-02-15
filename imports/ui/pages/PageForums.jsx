@@ -3,7 +3,7 @@ import {Redirect} from 'react-router-dom';
 import { Meteor } from 'meteor/meteor'
 import {MobileNavTop} from "../components/nav/mobileNavTop"
 import {BannerPage} from '../components/page/banner'
-import {ContainerPage} from '../components/elements/container'
+import {ContainerPage,Cors} from '../components/elements/container'
 
 const PageForums = () => {
     const user = Meteor.userId()
@@ -16,12 +16,14 @@ const PageForums = () => {
         <>
             <MobileNavTop />
             <ContainerPage>
-                <BannerPage 
-                img={"./img/banner/forums-icon.png"} 
-                alt={"forums-icon"} 
-                title={"Forums"} 
-                text={"Talk about anything! Gaming, music, comics and more!"}
-                />
+                <Cors>
+                    <BannerPage 
+                    img={"./img/banner/forums-icon.png"} 
+                    alt={"forums-icon"} 
+                    title={"Forums"} 
+                    text={"Talk about anything! Gaming, music, comics and more!"}
+                    />
+                </Cors>
             </ContainerPage>
         </>
     )

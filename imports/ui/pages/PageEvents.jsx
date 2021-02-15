@@ -3,7 +3,7 @@ import {Redirect} from 'react-router-dom';
 import { Meteor } from 'meteor/meteor'
 import {MobileNavTop} from "../components/nav/mobileNavTop"
 import {BannerPage} from '../components/page/banner'
-import {ContainerPage} from '../components/elements/container'
+import {ContainerPage,Cors} from '../components/elements/container'
 
 const PageEvents = () => {
     const user = Meteor.userId()
@@ -16,12 +16,14 @@ const PageEvents = () => {
         <>
             <MobileNavTop />
             <ContainerPage>
-                <BannerPage 
-                img={"./img/banner/events-icon.png"} 
-                alt={"events-icon"} 
-                title={"Events"} 
-                text={"Easily manage and create events or reminders!"}
-                />
+                <Cors>
+                    <BannerPage 
+                    img={"./img/banner/events-icon.png"} 
+                    alt={"events-icon"} 
+                    title={"Events"} 
+                    text={"Easily manage and create events or reminders!"}
+                    />
+                </Cors>
             </ContainerPage>
         </>
     )
