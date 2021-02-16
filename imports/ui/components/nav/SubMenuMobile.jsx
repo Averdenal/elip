@@ -2,7 +2,7 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import {SubMenuMobileUser} from './SubMenuMobileUser'
 import {SubMenuMobileIteam} from './SubMenuMobileIteam'
-import {SectionMiniBadge} from '../sectionMiniBadges'
+import {SectionMiniBadge} from './sectionMiniBadges'
 import { Overview,Group,Members,Badges,Quests,Streams,Events,Forums,Marketplace,Settings,Login } from "../svg"
 import {Meteor} from 'meteor/meteor'
 import { useHistory } from "react-router-dom";

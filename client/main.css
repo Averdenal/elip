@@ -6,3 +6,8 @@
   margin:0;
   font-family: "Rajdhani", sans-serif;
 }
+a, h1, h2, h3, h4, h5, h6, p {
+  color: #3e3f5e;
+  font-family: Rajdhani,sans-serif;
+  line-height: 1em;
+}

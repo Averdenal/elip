@@ -10,15 +10,25 @@ export const SettingsInfoUser = ()=> {
     return(
         <>
         <Settingdiv col={"1"} row={"2/5"}>
+
         </Settingdiv>
-        <Settingdiv col={"2/5"} row={"2"}>
-            <UserSettingForm userdata={userdata} />
+        <Settingdiv col={"2"} row={"2"}>
+
+        </Settingdiv>
+        <Settingdiv col={"3"} row={"2"}>
+
+        </Settingdiv>
+        <Settingdiv col={"4"} row={"2"}>
+
         </Settingdiv>
         <Settingdiv col={"2/5"} row={"3"}>
+            <UserSettingForm userdata={userdata} />
+        </Settingdiv>
+        <Settingdiv col={"2/5"} row={"4"}>
             <h3>Change Password</h3>
             <FormChangePassword />
         </Settingdiv>
-        <Settingdiv col={"2/5"} row={"4"}>
+        <Settingdiv col={"2/5"} row={"5"}>
             <h3>interests</h3>
             <UserFavoriteForm userdata={userdata} />
         </Settingdiv>

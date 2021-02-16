@@ -10,6 +10,7 @@ export const Cors = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     width:100%;
-    max-width:1000px;
+    max-width:1150px;
+    margin-bottom:70px;
 
 `
