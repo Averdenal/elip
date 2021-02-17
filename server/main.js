@@ -1,6 +1,8 @@
 import { Meteor } from 'meteor/meteor';
-import '../imports/api/users'
 import { Accounts } from 'meteor/accounts-base'
+
+import '../imports/api/users'
+import '../imports/api/badges'
 
 Meteor.startup(() => {
   if(Meteor.isClient){
